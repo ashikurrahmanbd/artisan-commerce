@@ -1,1 +1,17 @@
 /* your styles go here */
+
+.list-inline-item .language img{
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    
+}
+
+.dropdown-menu .dropdown-item img{
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+}
