@@ -58,29 +58,35 @@
         </li>
 
         <li>
-            <a href="#products-menu" aria-expanded="false" data-toggle="collapse">
+            <a href="#products-menu" aria-expanded="false" data-toggle="collapse" class="">
                 <i class="icon-windows">
                 </i>
                 Products
             </a>
-            <ul id="products-menu" class="collapse list-unstyled ">
+            <ul id="products-menu" class="collapse list-unstyled {{ 
+                Request::is('admin/dashboard/allproducts') || 
+                Request::is('admin/dashboard/add-new-products') || 
+                Request::is('admin/dashboard/product-categories') || 
+                Request::is('admin/dashboard/ecommerce-settings') 
+                ? 'show' : '' }}">
                 <li>
-                    <a href="#">
+                    <a href="{{ url('admin/dashboard/allproducts
+                    ') }}">
                         All Products
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url('admin/dashboard/add-new-products') }}">
                         Add New Poroduct
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url('admin/dashboard/product-categories') }}">
                         Product Categories
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ url('admin/dashboard/ecommerce-settings') }}">
                         eCommerce Settings
                     </a>
                 </li>
